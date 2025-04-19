@@ -1,0 +1,106 @@
+/* Background + Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 100px;
+    background: url('bg-light.gif') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.5s;
+  }
+  
+  /* Dark mode */
+  body.dark {
+    background: url('bg-dark.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  .counter-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 60px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  body.dark .counter-container {
+    background-color: rgba(44, 44, 44, 0.9);
+  }
+  
+  /* Text */
+  p {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 10px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00bcd4;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0097a7;
+    box-shadow: 0 0 15px #00bcd4;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Dark button hover */
+  body.dark button:hover {
+    background-color: #455a64;
+    box-shadow: 0 0 12px #607d8b;
+  }
+  
+  .toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    50% { transform: scale(0.95); }
+    70% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .bounce {
+    animation: bounce 0.4s ease;
+  }
+  
+  /* Glow Loop */
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px #00bcd4; }
+    50% { box-shadow: 0 0 20px #00bcd4; }
+    100% { box-shadow: 0 0 5px #00bcd4; }
+  }
+  
+  .glow-loop {
+    animation: pulseGlow 1.5s infinite;
+  }
+  
+  /* Pop Count Animation */
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+  }
+  
+  .pop {
+    animation: pop 0.3s ease-in-out;
+  }
+  
